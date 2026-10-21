@@ -177,6 +177,7 @@ The compiled APK will be located at `app/build/outputs/apk/debug/app-debug.apk`.
 ## 🗺️ Roadmap & Upcoming Features
 
 - [x] **Background & System-Wide Overlay Mode**: Run DMS as a Foreground Service with a draggable floating bubble over other apps like Google Maps or Waze.
+- [ ] **Persistent Settings & Preferences**: Save user thresholds, calibration sensitivity, audio/vibration preferences, and display modes across app restarts using Jetpack DataStore / SharedPreferences.
 - [ ] **Mouth Opening Ratio (MAR) Yawn Detection**: Detect yawning to capture fatigue before microsleeps occur.
 - [ ] **Low-Light Exposure Compensation**: Adaptive sensor exposure for dark cabin driving conditions.
 - [ ] **Session Analytics & Safety Score**: Local trip metrics logging alert frequencies and attentiveness duration.
