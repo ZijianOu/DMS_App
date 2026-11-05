@@ -3,6 +3,7 @@ package com.example.dms_app
 import android.os.Bundle
 import android.view.WindowManager
 import androidx.activity.ComponentActivity
+import androidx.activity.SystemBarStyle
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
@@ -19,7 +20,11 @@ class MainActivity : ComponentActivity() {
         // Keep the phone screen awake while driving/monitoring
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
 
-        enableEdgeToEdge()
+        // Force transparent system bars with light icons (for dark background)
+        enableEdgeToEdge(
+            statusBarStyle = SystemBarStyle.dark(android.graphics.Color.TRANSPARENT),
+            navigationBarStyle = SystemBarStyle.dark(android.graphics.Color.TRANSPARENT)
+        )
         setContent {
             DMS_AppTheme {
                 Surface(
